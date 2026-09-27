@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    color: #162d4f;
+    background: linear-gradient(#e6f4ff, #ffffff);
+    font-family: "Libre Caslon Text", Georgia, serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+h1 {
+    color: #235fd4;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    color: #df5034;
+}
+
+.hero {
+    padding: 3rem 1rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.globe-card {
+    border: 2px solid #235fd4;
+    background: #fdf7e8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+
+}
+
+.globe {
+    width: 418px;
+    height: 449px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #ffffff, #cfe6ff 65%, #9dc4ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.snow {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    display: flex;
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 0;
+}
+.rightSnow {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    display: flex;
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 0;
+    transform: scaleX(-1);
+}
+.FallingStars {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+.scene {
+    width: 78%
+}
+
+button {
+    font: inherit; 
+    color: #ffffff;
+    background: #df5034;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background 150ms ease, transform 150ms ease;
+}
+#message {
+     font-style: italic;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0) rotate(0deg);}
+    20% {transform: translateX(-0.6rem) rotate(-4deg);}
+    40% { transform: translateX(0.6rem) rotate(4deg);}
+    60% { transform: translateX(-0.4rem) rotate(-2deg);}
+    80% { transform: translateX(0.4rem) rotate(2deg);}
+}
+
+.globe.shaking {
+    animation: shake 600ms ease;
+}
